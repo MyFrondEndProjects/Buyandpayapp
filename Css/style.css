@@ -63,7 +63,16 @@ body
     border-radius:0.5em;
     opacity:0.7;
     background-image: url("/İmg/B.jpeg");
-    overflow-y: scroll;
+    overflow-y: scroll; 
+    justify-content: center;
+    align-items: center;
+   
+
+}
+.games
+{
+    display: inline-flex;
+    flex-wrap: wrap;
 }
 .shoppingb
 {
@@ -90,4 +99,13 @@ body
     top:5%;
     color:white;
     
+}
+.game
+{
+    width:20em;
+    height:20em;
+    background-color:gray;
+    margin-left:1em;
+    margin-top:2em;
+
 }
