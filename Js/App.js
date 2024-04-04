@@ -8,6 +8,7 @@ let pcneedforspeedmostwanted=document.querySelector("#pcneedforspeedmostwanted")
 let pceurotrucksimulator=document.querySelector("#pceurotrucksimulator");
 let pcfifa=document.querySelector("#pcfifa");
 let pcGrandTheftAutoSanAndreas=document.querySelector("#pcGrandTheftAutoSanAndreas");
+let header=document.getElementsByTagName("header");
 let info=document.querySelector(".info");
 let shoppingb=document.querySelector(".shoppingb");
 let container=document.querySelector(".container");
@@ -18,6 +19,12 @@ let shoppinglist=[];
 let urunfiyati=0;
 
 
+const carddata=[
+  {
+    kartno:"12345",
+    sifre:"1"
+  }
+]
 
 const pcpes2018buy=() =>
 {
@@ -181,6 +188,7 @@ let toplamtutar=0;
 
 function buy ()
 {
+ 
     games.textContent="";
     const div=document.createElement("div");
 
@@ -480,6 +488,8 @@ bilgi.textContent="Fiyat:"+urunfiyati+" TL ";
     function pay()
     {
 
+   
+      
         games.textContent="";
 
 let kredikart=document.createElement("img");
@@ -489,6 +499,53 @@ kredikart.style.height="25em";
 kredikart.style.position="absolute";
 kredikart.style.top="15%";
 kredikart.style.left="32%";
+
+
+let isim=document.createElement("span");
+isim.style.position="absolute";
+isim.style.fontSize="large";
+isim.textContent="isim soyisim";
+isim.style.top="17%";
+isim.style.color="white";
+isim.style.left="35%";
+
+
+let creditcardno=document.createElement("p");
+creditcardno.style.position="absolute";
+creditcardno.style.fontSize="2em";
+creditcardno.style.top="43%";
+creditcardno.style.left="35%";
+creditcardno.style.color="white";
+creditcardno.textContent="219410274092174";
+
+
+
+        let kartno=document.createElement("h2");
+        kartno.textContent="Kart numaranızı giriniz";
+        kartno.style.position="absolute";
+        kartno.style.bottom="22%";
+        kartno.style.color="green";
+        kartno.style.left="26.9%";
+        kartno.style.backgroundColor="white";
+        kartno.style.borderRadius="0.2em";
+
+        let pass=document.createElement("h2");
+        pass.textContent="Sifrenizi giriniz";
+        pass.style.position="absolute";
+        pass.style.bottom="15%";
+        pass.style.color="green";
+        pass.style.left="32%";
+        pass.style.backgroundColor="white";
+        pass.style.borderRadius="0.2em";
+
+        let isimsoyisimm=document.createElement("h2");
+        isimsoyisimm.textContent="İsim soy isim giriniz";
+        isimsoyisimm.style.position="absolute";
+        isimsoyisimm.style.bottom="7.4%";
+        isimsoyisimm.style.color="green";
+        isimsoyisimm.style.left="29.2%";
+        isimsoyisimm.style.backgroundColor="white";
+        isimsoyisimm.style.borderRadius="0.2em";
 
         let kartnumarasi=document.createElement("input");
         kartnumarasi.style.width="15em";
@@ -502,6 +559,7 @@ kredikart.style.left="32%";
         let sifre=document.createElement("input");
         sifre.style.width="15em";
        sifre.style.height="1.8em";
+       sifre.type="password";
          sifre.style.position="absolute";
          sifre.style.fontSize="large";
          sifre.style.bottom="14%";
@@ -529,12 +587,120 @@ kredikart.style.left="32%";
        kaydet.style.borderRadius="0.5em";
        kaydet.textContent="Kaydet";
        
+       let information =document.createElement("h1");
+       information.style.position="absolute";
+       information.style.top="5%";
+       information.style.left="39%";
+       information.style.textContent="212421421421421";
+       information.style.color="white";
 
+
+
+
+       games.appendChild(information);
         games.appendChild(kartnumarasi);
         games.appendChild(kredikart);
         games.appendChild(sifre);
         games.appendChild(adsoyad);
         games.appendChild(kaydet);
+        games.appendChild(kartno);
+        games.appendChild(pass);
+        games.appendChild(isimsoyisimm);
+        games.appendChild(creditcardno);
+        games.appendChild(isim);
+
+
+        const cardinfo=() =>
+        {
+             for(let w=0; w<carddata.length; w++)
+             {
+              if(carddata[w].kartno==kartnumarasi.value && carddata[w].sifre==sifre.value)
+              {
+                let cardnosave=kartnumarasi.value;
+                let passwordsave=sifre.value;
+                isim.textContent=adsoyad.value;
+                creditcardno.textContent=kartnumarasi.value;
+
+
+                games.textContent="";
+
+                let adressb=document.createElement("h1");
+                adressb.style.position="absolute";
+                adressb.style.color="white";
+                adressb.style.top="11%";
+                adressb.style.left="42.5%";
+                adressb.textContent="Adresinizi giriniz";
+
+
+                let adress=document.createElement("div");
+                adress.style.width="30em";
+                adress.style.height="15em";
+                adress.style.backgroundColor="white";
+                adress.style.borderRadius="0.2em";
+              adress.style.position="absolute";
+              adress.style.bottom="20em";
+              adress.style.left="37.6em";
+              adress.style.backgroundColor="#66CDAA";
+
+                adressinput=document.createElement("input");
+                adressinput.style.width="20em";
+                adressinput.style.height="1.5em";
+                adressinput.style.fontSize="1.5em";
+                adressinput.style.borderRadius="0.2em";
+                adressinput.style.position="absolute";
+                adressinput.style.bottom="11em";
+                adressinput.style.left="35%";
+
+                adresssavebuton=document.createElement("button");
+                adresssavebuton.style.width="20em";
+                adresssavebuton.style.height="1.5em";
+                adresssavebuton.style.fontSize="1.5em";
+                adresssavebuton.style.borderRadius="0.2em";
+                adresssavebuton.style.position="absolute";
+                adresssavebuton.style.bottom="7.9em";
+                adresssavebuton.style.left="35%";
+                adresssavebuton.textContent="Adresi kaydet";
+                adresssavebuton.style.backgroundColor="#66CDAA";
+                adresssavebuton.style.color="black";
+                
+
+
+
+                const siparistamamla=() =>
+                {
+                  let adressave=document.createElement("h1");
+
+                  adressave.textContent=adressinput.value;
+
+                  adress.appendChild(adressave);
+               
+                  adresssavebuton.textContent="Siparişi tamamla";
+                  adressinput.value="";
+                }
+
+
+
+
+                adresssavebuton.addEventListener("click", siparistamamla);
+
+                games.appendChild(adressb);
+                games.appendChild(adress);
+                games.appendChild(adressinput);
+                games.appendChild(adresssavebuton);
+              
+
+             
+              }
+              else 
+              {
+                information.innerHTML="Kart numarası veya şifre yanlış";
+              }
+             }
+        }
+        kaydet.addEventListener("click",cardinfo)
+
+       
+
     }
 
     tutar.addEventListener("click",pay);
