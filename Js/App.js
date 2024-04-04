@@ -668,7 +668,9 @@ creditcardno.textContent="219410274092174";
 
                 const siparistamamla=() =>
                 {
-                  let adressave=document.createElement("h1");
+                  if(adressinput.value!="" && adressinput.value.length>5)
+                  {
+                    let adressave=document.createElement("h1");
 
                   adressave.textContent=adressinput.value;
 
@@ -676,6 +678,18 @@ creditcardno.textContent="219410274092174";
                
                   adresssavebuton.textContent="Siparişi tamamla";
                   adressinput.value="";
+                  }
+
+
+                  if(adresssavebuton.textContent=="Siparişi tamamla")
+                  {
+
+                    const faturayaz=() =>
+                    {
+                      games.textContent="";
+                    }
+                    adresssavebuton.addEventListener("click",faturayaz);
+                  }
                 }
 
 
