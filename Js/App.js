@@ -21,7 +21,7 @@ let urunfiyati=0;
 
 const carddata=[
   {
-    kartno:"12345",
+    kartno:"1",
     sifre:"1"
   }
 ]
@@ -687,6 +687,22 @@ creditcardno.textContent="219410274092174";
                     const faturayaz=() =>
                     {
                       games.textContent="";
+
+                      let fatura=document.createElement("div");
+                      fatura.style.position="absolute";
+                      fatura.style.width="30%";
+                      fatura.style.height="90%";
+                      fatura.style.left="35%";
+                      fatura.style.top="5%";
+                      fatura.style.backgroundColor="white";
+                      fatura.style.border="solid";
+                      fatura.style.borderBlockColor="black";
+                      fatura.style.borderRadius="0.2em";
+                      
+
+                      
+
+                      games.appendChild(fatura);
                     }
                     adresssavebuton.addEventListener("click",faturayaz);
                   }
