@@ -11,31 +11,14 @@ header
  height:5em;
  background-color:	#101010;
 }
-header ul 
+
+header h1 
 {
-    display:inline-flex;
-    position:absolute;
-    right:7%;
-    top:-4.5%;
-    
-}
-header ul li 
-{
-    list-style:none;
-    margin:5em;
-  
-}
-header ul li a 
-{
-    color:darkslateblue;
-    text-decoration:none;
-}
-header ul li a:hover
-{
+    margin-left:26em;
+    margin-top:2em;
     color:white;
-    text-decoration:none;
-    
 }
+
 body
 {
   
@@ -45,13 +28,7 @@ body
  
   
 }
-.logo
-{
-    position:absolute;
-    width:5em;
-    height:5em;
-    left:3%;
-}
+
 .container
 {
     position:absolute;
@@ -79,24 +56,23 @@ body
     position:absolute;
     width:8em;
     height:8.5em;
-    right:1%;
-    top:-4%;
+    right:2%;
+    top:-2%;
 }
 .info
 {
     position:absolute;
-    right:4%;
-    top:1.4%;
+    right:5%;
+    top:3.6%;
     color:green;
     font-size:1.4em;
-    border:1px solid green; 
     border-radius:100%;
 }
 .Buytext
 {
     position:absolute;
-    right:3%;
-    top:5%;
+    right:2.9%;
+    top:8%;
     color:white;
     
 }
@@ -138,4 +114,51 @@ body
     padding:0.5em;
     background-color:white;
     color:green;
+}
+.fatura1 
+{
+    position:absolute;
+    width:30%;
+    height:60%;
+    border:1px solid black;
+    color:black;
+    background-color:white;
+background-image: url("/İmg/fatura.jpg");
+background-size: cover;
+    left:35%;
+    top:20%;
+    text-align: center;
+
+}
+.fatura1 h2 
+{
+    margin-top:2em;
+}
+.satılan
+{
+    position:absolute;
+    top:32%;
+    left:36.5%;
+}
+.siparisonay
+{
+    position:absolute;
+    bottom:1%;
+    left:38%;
+    padding:1em;
+    background-color:#66CDAA;
+    border-radius:"0.5em";
+text-decoration: none;
+color:black;
+}
+.siparisonay:hover
+{
+    position:absolute;
+    bottom:1%;
+    left:38%;
+    padding:1em;
+    background-color:#66CDAA;
+    border-radius:"0.5em";
+text-decoration: none;
+color:white;
 }
