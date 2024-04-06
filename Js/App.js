@@ -13,11 +13,13 @@ let info=document.querySelector(".info");
 let shoppingb=document.querySelector(".shoppingb");
 let container=document.querySelector(".container");
 let games=document.querySelector(".games");
+let faturaonay=document.querySelector(".fatura1");
+let list=document.querySelector(".list");
 let sayac=0;
 info.textContent="";
 let shoppinglist=[];
 let urunfiyati=0;
-
+faturaonay.remove();
 
 const carddata=[
   {
@@ -688,21 +690,52 @@ creditcardno.textContent="219410274092174";
                     {
                       games.textContent="";
 
-                      let fatura=document.createElement("div");
-                      fatura.style.position="absolute";
-                      fatura.style.width="30%";
-                      fatura.style.height="90%";
-                      fatura.style.left="35%";
-                      fatura.style.top="5%";
-                      fatura.style.backgroundColor="white";
-                      fatura.style.border="solid";
-                      fatura.style.borderBlockColor="black";
-                      fatura.style.borderRadius="0.2em";
-                      
+                      games.appendChild(faturaonay)
+
+                      let adressprint=document.querySelector(".adresonay");
+                      adressprint.textContent=adress.textContent;
+                  
+                      list.style.flexwrap="wrap";
+                      let adet=document.createElement("h1");
+                    
+                      adet.textContent=sayac+" adet oyun "+toplamtutar+" TL";
+                      list.appendChild(adet);
+
+             
+                   
+                    let siparisonay=document.querySelector(".siparisonay");
+
+
+                    const siparischeck=() =>
+                    {
+                    games.textContent="";
+
+
+
+                    let thankyou=document.createElement("div");
+                    thankyou.style.position="absolute";
+                    thankyou.style.fontSize="3em";
+                    thankyou.style.paddingTop="1em";
+                    thankyou.style.top="25%";
+                    thankyou.style.left="25%";
+                    thankyou.style.width="50%";
+                    thankyou.style.height="50%";
+                    thankyou.style.borderRadius="0.2em";
+                    thankyou.style.textAlign="center";
+                    thankyou.style.color="white";
+                    thankyou.style.backgroundColor="#66CDAA";
+                    thankyou.textContent="Siparişiniz tamamlanmıştır bizi tercih ettiğiniz için teşekkür ederiz";
+
+
+
+
+                    games.appendChild(thankyou);
+
+
 
                       
-
-                      games.appendChild(fatura);
+                    }
+                    siparisonay.addEventListener("click",siparischeck);
                     }
                     adresssavebuton.addEventListener("click",faturayaz);
                   }
